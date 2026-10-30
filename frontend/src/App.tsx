@@ -4,6 +4,7 @@ import MonitoringPage from './pages/tools/MonitoringPage'
 import PathGeneratorPage from './pages/tools/PathGeneratorPage'
 import ImageUploadPage from './pages/tools/ImageUploadPage'
 import TextParserPage from './pages/tools/TextParserPage'
+import ViewportPage from './pages/ViewportPage'
 import './styles/index.css'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/tools" element={<Navigate to="/" replace />} />
         <Route path="/tools/*" element={<Navigate to="/" replace />} />
+        <Route path="/viewport" element={<ViewportPage />} />
         <Route path="/" element={<ToolsLayout />}>
           <Route index element={<MonitoringPage />} />
           <Route path="generator" element={<PathGeneratorPage />} />
