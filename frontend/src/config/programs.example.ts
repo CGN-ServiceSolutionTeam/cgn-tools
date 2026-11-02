@@ -1,4 +1,4 @@
-export type BroadcastDateType = "same" | "sunday" | "tuesday" | "wednesday";
+export type BroadcastDateType = "same" | "saturday" | "sunday" | "tuesday" | "wednesday";
 
 // 실제 사용 시 이 파일을 programs.ts로 복사하고 데이터를 채워주세요.
 

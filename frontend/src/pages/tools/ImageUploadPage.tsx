@@ -33,6 +33,7 @@ const getBroadcastDate = (uploadDate: Date, type: BroadcastDateType): Date => {
     monday.setDate(uploadDate.getDate() + diff);
     switch (type) {
         case "same": return new Date(uploadDate);
+        case "saturday": { const d = new Date(monday); d.setDate(monday.getDate() - 2); return d; }
         case "sunday": { const d = new Date(monday); d.setDate(monday.getDate() - 1); return d; }
         case "tuesday": { const d = new Date(monday); d.setDate(monday.getDate() + 1); return d; }
         case "wednesday": { const d = new Date(monday); d.setDate(monday.getDate() + 2); return d; }
